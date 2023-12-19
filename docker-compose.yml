@@ -2,13 +2,14 @@
 version: '3'
 services:
     php:
-        build: 
+        build:
             context: ./docker
             dockerfile: php.Dockerfile
         volumes:
             - './app:/var/www/html'
         depends_on:
             - mariadb
+
     nginx:
         image: nginx:latest
         ports:
@@ -18,7 +19,8 @@ services:
             - 'php'
         volumes:
             - './app:/var/www/html'
-            - './congig/nginx:/etc/nginx/conf.d'
+            - './config/nginx:/etc/nginx/conf.d'
+
     mariadb:
         image: mariadb:11
         restart: 'on-failure'
