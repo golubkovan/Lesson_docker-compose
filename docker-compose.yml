@@ -1,1 +1,8 @@
 ---
+version: '3'
+services:
+    php:
+        build: 
+            context: ./decker
+            dockerfile: php.Dockerfile
+        volumes:
