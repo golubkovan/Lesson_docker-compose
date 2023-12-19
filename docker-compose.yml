@@ -13,7 +13,7 @@ services:
     nginx:
         image: nginx:latest
         ports:
-            - '80:80'
+            - '85:85'
             - '443:443'
         links:
             - 'php'
