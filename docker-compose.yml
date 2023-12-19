@@ -17,7 +17,7 @@ services:
         links:
             - 'php'
         volumes:
-            - './app/var/www/html'
+            - './app:/var/www/html'
             - './congig/nginx:/etc/nginx/conf.d'
     mariadb:
         image: mariadb:11
